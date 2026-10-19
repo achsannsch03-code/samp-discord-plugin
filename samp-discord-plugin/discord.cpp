@@ -23,17 +23,17 @@ namespace Discord
 		handlers.joinGame = joinGame;
 		handlers.spectateGame = spectateGame;
 		handlers.joinRequest = joinRequest;
-		Discord_Initialize("416719211960991756", &handlers, 1, nullptr);
+		Discord_Initialize("1561635173299130389", &handlers, 1, nullptr);
 		Discord_ClearPresence();
 	}
 
 	void update(const time_t time, const char* state, const char* details, const char* image, const char* imageDetails, const char* infoDetails)
 	{
 		DiscordRichPresence discordPresence = { 0 };
-		discordPresence.state = state;
-		discordPresence.details = details;
+		discordPresence.state = "In Los Santos";   // Author :Struggle
+		discordPresence.details = "Playing SA-MP"; // LOWBOTTOMXIV;
 		discordPresence.startTimestamp = time;
-		discordPresence.largeImageKey = image;
+		discordPresence.largeImageKey = "clanton";
 		discordPresence.largeImageText = imageDetails;
 		discordPresence.smallImageKey = "info";
 		discordPresence.smallImageText = infoDetails;
